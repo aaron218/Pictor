@@ -3,6 +3,7 @@ package net.theneverland.java.Basic;
 /**
  * Created by aaron on 12/18/2014.
  * MD5 工具 用作算法验证，一般直接使用更加官方的数据处理包工具
+ * 来自网上范例算法
  */
 
 public class MD5Util {
