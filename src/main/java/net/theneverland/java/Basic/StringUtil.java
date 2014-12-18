@@ -33,7 +33,7 @@ public class StringUtil {
 
 
     /**
-     * 判断是否是符合标准的日期字符串
+     * 判断是否是符合标准的日期字符串 用尝试转化成日期的方式，性能消耗较大
      * @param str_input 待检测字符串
      * @param rDateFormat 日期格式
      * @return 匹配则返回true
