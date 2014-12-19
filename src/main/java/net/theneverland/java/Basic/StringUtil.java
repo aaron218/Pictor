@@ -1,5 +1,6 @@
 package net.theneverland.java.Basic;
 
+import java.io.FilterInputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +14,11 @@ import java.util.List;
  */
 public class StringUtil {
 
-    private static final String emptyStr = "";
-    private static final String Zero = "0";
-    private static final String NullStr = "null";
-    private static final String Confirm = "yes";
-    private static final String Reject = "no";
+    public static final String emptyStr = "";
+    public static final String Zero = "0";
+    public static final String NullStr = "null";
+    public static final String Confirm = "yes";
+    public static final String Reject = "no";
 
 
 //判定型功能区    用于字符串判定的方法如下
