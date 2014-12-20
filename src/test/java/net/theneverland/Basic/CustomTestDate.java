@@ -30,6 +30,17 @@ public class CustomTestDate {
             dateTime1.dayOfYear().withMaximumValue().millisOfDay().withMaximumValue();
         }
         System.out.println("Time"+(System.currentTimeMillis()-start));
+    }
 
+    @Test
+    public void testString(){
+        String strroot = "20141010";
+        long start = System.currentTimeMillis();
+        for (int i=0;i<1000000;i++){
+            new Date();
+            strroot = strroot.substring(0,3)+"1231235959";
+            strroot = strroot.substring(0,3)+"0101000000";
+        }
+        System.out.println("Time:"+(System.currentTimeMillis()-start));
     }
 }

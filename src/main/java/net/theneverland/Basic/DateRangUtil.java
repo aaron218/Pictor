@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  * Created by aaron on 12/20/2014.
- * 日期范围工具 处理不同的输入日期，返回起止两个日期对象(这两个对象在参数中传入)
+ * 日期范围工具 处理不同的输入日期，返回起止两个日期对象(这两个对象在参数中传入) 该日期处理依赖于joda-time包
  */
 public class DateRangUtil {
 
