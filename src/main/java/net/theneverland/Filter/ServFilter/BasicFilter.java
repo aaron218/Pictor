@@ -16,4 +16,6 @@ public interface BasicFilter {
     void doFilter(FilterRequest var1, FilterResponse var2, FilterChainBase var3) throws IOException, FilterException;
 
     void destroy();
+
+
 }

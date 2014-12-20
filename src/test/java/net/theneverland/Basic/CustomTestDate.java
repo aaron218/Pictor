@@ -26,7 +26,7 @@ public class CustomTestDate {
             DateTime dateTime1 = new DateTime(new Date());
             dateTime1 = dateTime1.minusYears(i);
             dateTime1.dayOfMonth().withMaximumValue();
-            //dateTime1.millisOfDay().withMaximumValue();
+            dateTime1.millisOfDay().withMaximumValue();
             dateTime1.dayOfYear().withMaximumValue().millisOfDay().withMaximumValue();
         }
         System.out.println("Time"+(System.currentTimeMillis()-start));
