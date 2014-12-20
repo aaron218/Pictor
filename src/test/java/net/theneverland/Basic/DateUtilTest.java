@@ -1,4 +1,4 @@
-package net.theneverland.java.Basic;
+package net.theneverland.Basic;
 
 import static org.junit.Assert.*;
 

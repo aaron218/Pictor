@@ -1,4 +1,4 @@
-package net.theneverland.java.Basic;
+package net.theneverland.Basic;
 
 /**
  * Created by aaron on 12/18/2014.

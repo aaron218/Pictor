@@ -1,6 +1,5 @@
-package net.theneverland.java.Basic;
+package net.theneverland.Basic;
 
-import java.io.FilterInputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package net.theneverland.java.Basic;
+package net.theneverland.Basic;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

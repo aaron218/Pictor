@@ -1,4 +1,4 @@
-package net.theneverland.java.Filter;
+package net.theneverland.Filter.ServFilter;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public interface BasicFilter {
 
     void init(FilterConfig var1) throws FilterException;
 
-    void doFilter(Object var1, Object var2, FilterChain var3) throws IOException, FilterException;
+    void doFilter(FilterRequest var1, FilterResponse var2, FilterChainBase var3) throws IOException, FilterException;
 
     void destroy();
 }

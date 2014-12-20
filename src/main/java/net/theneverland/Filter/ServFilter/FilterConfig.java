@@ -1,4 +1,4 @@
-package net.theneverland.java.Filter;
+package net.theneverland.Filter.ServFilter;
 
 import java.util.Enumeration;
 
