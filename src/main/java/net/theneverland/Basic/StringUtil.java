@@ -19,9 +19,7 @@ public class StringUtil {
     public static final String Confirm = "yes";
     public static final String Reject = "no";
 
-
 //判定型功能区    用于字符串判定的方法如下
-
     public  static boolean StrEquals(String value,String constStr){
         if(value == null && constStr ==null){
             return true;
@@ -123,8 +121,7 @@ public class StringUtil {
                 && (isNumeric(value) || isDouble(value));
     }
 
-//转换型功能区   用于字符串转换的方法
-
+//转换型功能区   用于字符串转换、分割的方法
     /***
      * 将逗号分隔的数字字符串转换成List<Long>
      * @param value 逗号分隔的数字字符串
@@ -146,5 +143,42 @@ public class StringUtil {
             }
         }
         return ls;
+    }
+
+    /***
+     * 获取从指定位置到指定字符之间的字符串<br>
+     * 字符串先通过{@link StringUtil#isNullOrEmpty}判空，对于空字符串，直接返回null，index大于字符串长度或者split字符未定义的，返回null
+     * <br>指定的split字符在字符串中不存在时，则返回从index到字符串结尾的字串
+     * @param str 待处理字符串
+     * @param index 起始位置
+     * @param split 结尾判定分隔符
+     * @return 符合条件的子串
+     */
+    public static String subStringByChar(String str, int index, char split){
+        if(StringUtil.isNullOrEmpty(str) || index >= str.length() || split == '\0'){
+            return null;
+        }
+        if(str.indexOf(split,index) == -1){
+            return  str.substring(index);
+        }
+        return str.substring(index, str.indexOf(split, index));
+    }
+
+    /***
+     * 获取从指定字符串indexStr到指定字符split之间的字符串，并且不包括indexStr字符串
+     * <br>如果指定的字符串在str串中不存在，则返回str字符串
+     * @param str 待处理字符串
+     * @param indexStr 判定字符串
+     * @param split 结尾判定分隔符
+     * @return 符合条件的子串
+     */
+    public static String subStringByChar(String str, String indexStr, char split){
+        if(isNullOrEmpty(indexStr)){
+            return subStringByChar(str, 0, split);
+        }
+        if(!str.contains(indexStr)){
+            return str;
+        }
+        return subStringByChar(str, str.indexOf(indexStr) + indexStr.length(), split);
     }
 }
