@@ -4,6 +4,8 @@ import org.joda.time.DateTime;
 import org.junit.Test;
 
 import java.lang.reflect.Method;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 
 /**
@@ -26,7 +28,7 @@ public class CustomTestDate {
             DateTime dateTime1 = new DateTime(new Date());
             dateTime1 = dateTime1.minusYears(i);
             dateTime1.dayOfMonth().withMaximumValue();
-            //dateTime1.millisOfDay().withMaximumValue();
+            dateTime1.millisOfDay().withMaximumValue();
             dateTime1.dayOfYear().withMaximumValue().millisOfDay().withMaximumValue();
         }
         System.out.println("Time"+(System.currentTimeMillis()-start));
@@ -42,5 +44,13 @@ public class CustomTestDate {
             strroot = strroot.substring(0,3)+"0101000000";
         }
         System.out.println("Time:"+(System.currentTimeMillis()-start));
+    }
+
+    @Test
+    public void testSubString(){
+        String  str = "String name:testSubString to be test";
+        System.out.println(str.indexOf('Z'));
+        System.out.println(str.indexOf("String"));
+        //System.out.println(str.substring(0,-1));
     }
 }
