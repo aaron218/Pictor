@@ -1,12 +1,14 @@
 package net.theneverland.Filter.SimpleFilter.Solr;
 
 import net.theneverland.Filter.SimpleFilter.Response;
+import org.apache.solr.common.SolrDocument;
 
 /**
  * Created by aaron on 12/20/2014.
  */
 public class SolrResponse extends Response {
 
+    private SolrDocument solrDocument;
     private String responseObj;
     private Object pattern;
     private Object flag;
@@ -38,5 +40,13 @@ public class SolrResponse extends Response {
     @Override
     public void setFlag(Object flag) {
         this.flag = flag;
+    }
+
+    public SolrDocument getSolrDocument() {
+        return solrDocument;
+    }
+
+    public void setSolrDocument(SolrDocument solrDocument) {
+        this.solrDocument = solrDocument;
     }
 }
