@@ -6,6 +6,7 @@
 
     <groupId>net.newString</groupId>
     <artifactId>Pictor</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.1-SNAPSHOT</version>
 
 
@@ -22,6 +23,17 @@
             </plugins>
         </pluginManagement>
     </build>
+
+
+    <modules>
+        <module>pictor-core</module>
+        <module>pictor-dialog</module>
+        <module>pictor-cli</module>
+        <module>pictor-img</module>
+        <module>pictor-poi-ssf</module>
+        <module>pictor-demo</module>
+        <module>pictor-impl-sshs</module>
+    </modules>
 
     <dependencies>
         <dependency>
